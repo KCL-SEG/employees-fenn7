@@ -41,7 +41,7 @@ class Employee:
     def __str__(self):
         sDescription = self.getSalaryDescription()
         cDescription = self.getComissionDescription()
-        return (self.name + sDescription + cDescription + ". Their total pay is " + str(self.get_pay()) + ".") 
+        return (self.name + sDescription + cDescription + ".  Their total pay is " + str(self.get_pay()) + ".") 
 
 class Salary(metaclass = abc.ABCMeta):
     def __init__(self, pay):
@@ -116,6 +116,6 @@ robbie = Employee('Robbie', MonthlySalary(2000), Commision(1500))
 ariel = Employee('Ariel', HourlySalary(30, 120), Commision(600))
 
 # testing purposes
-# empList = [ billie, charlie, renee, jan, robbie, ariel ]
-# for emp in empList:
-#    print(emp)
+empList = [ billie, charlie, renee, jan, robbie, ariel ]
+for emp in empList:
+    print(emp)
